@@ -1,7 +1,7 @@
 (function(exports) {
 
-  function Transactions(){
-    this.balance = new Balance
+  function Transactions(balance){
+    this.balance = balance
     this.history = []
   }
 

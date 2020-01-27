@@ -1,8 +1,8 @@
 (function(exports) {
 
 
-  function Account(){
-    this.transactions = new Transactions;
+  function Account(transaction){
+    this.transactions = transaction;
   }
   
   Account.prototype.display = function() {

@@ -1,7 +1,9 @@
 describe("Account", function() {
 
   beforeEach(function() {
-    account = new Account();
+    balance = new Balance
+    transactions = new Transactions(balance)
+    account = new Account(transactions);
   })
 
   describe('Deposit', function() {

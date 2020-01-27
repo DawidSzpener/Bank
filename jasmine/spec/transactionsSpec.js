@@ -1,7 +1,10 @@
 describe("Transactions", function() {
 
   beforeEach(function() {
-    transactions = new Transactions();
+    
+    balance = new Balance
+    transactions = new Transactions(balance)
+
   })
 
   describe('Deduct', function() {
