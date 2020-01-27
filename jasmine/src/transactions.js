@@ -20,10 +20,11 @@
   }
 
   Transactions.prototype.showTransactions = function() {
-    console.log("date || credit || debit || balance")
+    arry = ['date || credit || debit || balance']
     for (index = this.history.length -1; index >= 0; index--) { 
-      console.log(this.history[index]); 
+      arry.push(this.history[index]); 
     }
+    return(arry.join('\n'))
   }
 
   exports.Transactions = Transactions;
