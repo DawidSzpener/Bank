@@ -1,8 +1,11 @@
 describe("Balance", function() {
 
   describe('currentBalance', function() {
+
+    var balance = new Balance
+
     it("Should return balance value", function() {
-      expect().toEqual();
+      expect(balance.show()).toEqual(0);
     });
   });
 });
