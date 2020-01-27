@@ -1,13 +1,12 @@
 (function(exports) {
 
-  function add(int1, int2) {
-    return int1+int2
-  };
 
-  function deduct(int1, int2) {
-    return int1-int2
-  };
+  var balance = new Balance
+  function Transactions(){
+  }
+  
+  Transactions.prototype.show = function() {
+  }
 
-  exports.add = add;
-  exports.deduct = deduct;
+  exports.Transactions = Transactions
 })(this);
