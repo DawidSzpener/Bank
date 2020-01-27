@@ -20,9 +20,7 @@ describe("Account", function() {
 
   describe('Display', function() {
     it("Should show previous transactions", function() {
-      account.deposit(200)
-      account.withdraw(200)
-      expect(account.display()).toEqual([[ '2020-1-27', 200, 200 ], [ '2020-1-27', 200, 0 ]]);
+      expect(account.display()).toEqual();
     });
   });
 });
