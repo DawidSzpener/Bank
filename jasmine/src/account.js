@@ -1,5 +1,5 @@
 (function(exports) {
-  var EXCLAMATION_MARK_COUNT = 5
+  var balance = new Balance
 
   function exclaim(string) {
     return string + "!".repeat(EXCLAMATION_MARK_COUNT);
