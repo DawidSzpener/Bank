@@ -1,12 +1,11 @@
 (function(exports) {
 
-  var ammount = 0
-
   function Balance(){
+    this.ammount = 0
   }
   
   Balance.prototype.show = function() {
-    return ammount;
+    return this.ammount;
   }
 
   exports.Balance = Balance;

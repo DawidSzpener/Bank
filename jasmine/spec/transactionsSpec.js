@@ -1,20 +1,20 @@
 describe("Transactions", function() {
 
   beforeEach(function() {
-    transaction = new Transaction();
+    transactions = new Transactions();
   })
 
   describe('Deduct', function() {
     it("Should deduct amount from the account", function() {
-      deduct(200)
-      expect(transaction.balance(show)).toEqual(300);
+      transactions.deduct(200)
+      expect(transactions.show()).toEqual(-200);
     });
   });
 
   describe('Add', function() {
     it("Should add balance to the account by amount", function() {
-      add(200)
-      expect(transaction.balance(show)).toEqual(700);
+      transactions.add(200)
+      expect(transactions.show()).toEqual(200);
     });
   });
 });

@@ -1,12 +1,20 @@
 (function(exports) {
 
-
-  var balance = new Balance
   function Transactions(){
+    this.balance = new Balance
   }
   
-  Transactions.prototype.show = function() {
+  Transactions.prototype.add = function(int) {
+    this.balance.ammount += int;
+  }
+  
+  Transactions.prototype.deduct = function(int) {
+    this.balance.ammount -= int;
   }
 
-  exports.Transactions = Transactions
+  Transactions.prototype.show = function() {
+    return this.balance.show()
+  }
+
+  exports.Transactions = Transactions;
 })(this);
