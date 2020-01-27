@@ -7,7 +7,7 @@
   
   Transactions.prototype.add = function(int) {
     this.balance.ammount += int;
-    this.history.push()
+    this.history.push((new Today).date())
   }
   
   Transactions.prototype.deduct = function(int) {
