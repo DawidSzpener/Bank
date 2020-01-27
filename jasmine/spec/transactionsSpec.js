@@ -14,7 +14,7 @@ describe("Transactions", function() {
   describe('Add', function() {
     it("Should add balance to the account by amount", function() {
       transactions.add(200)
-      expect(transactions.showTransactions()).toEqual("date || credit || debit || balance 27/01/2012 || || 500.00 || 2500.00");
+      expect(transactions.showTransactions()).toEqual(['2020-1-27', 200, 200]);
     });
   });
 });

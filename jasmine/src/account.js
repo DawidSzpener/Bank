@@ -4,7 +4,7 @@
   function Account(){
   }
   
-  Account.prototype.show = function() {
+  Account.prototype.display = function() {
   }
 
   Account.prototype.withdraw = function() {

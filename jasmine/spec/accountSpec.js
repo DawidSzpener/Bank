@@ -12,8 +12,8 @@ describe("Account", function() {
     });
   });
 
-  describe('Show', function() {
-    it("Should show accounts balance", function() {
+  describe('Display', function() {
+    it("Should show previous transactions", function() {
       expect().toEqual();
     });
   });
