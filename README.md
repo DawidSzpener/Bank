@@ -48,4 +48,4 @@
 
 
 
-![alt text](https://github.com/DawidSzpener/Bank/sc.png)
+![alt text](https://github.com/DawidSzpener/Bank/blob/master/sc.png)
