@@ -7,12 +7,12 @@
 
   Transactions.prototype.add = function(int) {
     this.balance.ammount += int;
-    this.history.push((new Today).date() + " || || " + int + " || " + this.balance.show());
+    this.saveAddRecord(int)
   };
 
   Transactions.prototype.deduct = function(int) {
     this.balance.ammount -= int;
-    this.history.push((new Today).date() + " || " + int + " || || " + this.balance.show());
+    this.saveDeductRecord(int)
   };
 
   Transactions.prototype.show = function() {
@@ -20,12 +20,19 @@
   };
 
   Transactions.prototype.showTransactions = function() {
-    arry = ["date || credit || debit || balance"];
-    for (index = this.history.length -1; index >= 0; index--) { 
-      arry.push(this.history[index]); 
+    console.log("date || credit || debit || balance");
+    for (index = this.history.length -1; index >= 0; index--) {
+      console.log(this.history[index]);
     }
-    return(arry.join("\n"));
   };
+
+  Transactions.prototype.saveAddRecord = function(int) {
+    this.history.push((new Today).date() + " || || " + int + " || " + this.balance.show());
+  }
+
+  Transactions.prototype.saveDeductRecord = function(int) {
+    this.history.push((new Today).date() + " || " + int + " || || " + this.balance.show());
+  }
 
   exports.Transactions = Transactions;
 })(this);
