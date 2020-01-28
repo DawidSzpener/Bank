@@ -10,6 +10,15 @@
 * Open SpecRunner.html file in your browser
 
 
+##### How to install and run coverage tools
+
+* Run npm install
+* Type `npm test` in command line (That should start a `http://localhost:9878` server) 
+* The coverage should be displayed in command line
+* To run ESlint tests use `npx eslint ./jasmine/src/file_name.js`
+
+
+
 ## OO design and aproach
 
 

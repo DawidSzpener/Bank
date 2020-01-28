@@ -23,4 +23,12 @@ describe("Transactions", function() {
       expect(transactions.show()).toEqual(200);
     });
   });
+
+  describe('showTransactions', function() {
+    it("Should display the transactions history", function() {
+      transactions.add(200)
+      transactions.add(200)
+      expect(transactions.showTransactions()).toEqual('date || credit || debit || balance\n2020-1-28 || || 200 || undefined\n2020-1-28 || || 200 || undefined');
+    });
+  });
 });

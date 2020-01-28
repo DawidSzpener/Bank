@@ -18,7 +18,9 @@
     "supertest": "^4.0.2"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
     "karma-coverage-istanbul-reporter": "^2.1.1",
+    "karma-eslint": "^2.2.0",
     "karma-phantomjs-launcher": "^1.0.4"
   },
   "scripts": {
