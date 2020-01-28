@@ -23,12 +23,12 @@ describe("Account", function() {
   });
 
   describe('Display', function() {
-    it("Should show previous transactions", function() {
+    it("Should show all transactions", function() {
       spyOn(window.console, 'log')
+      account.deposit(200)
+      account.deposit(200)
       transactions.showTransactions.and.returnValue(console.log("1"))
-      account.deposit(200)
-      account.deposit(200)
-      transactions.showTransactions()
+      account.display()
       expect(window.console.log).toHaveBeenCalled();
     });
   });

@@ -4,7 +4,7 @@
 ## Testing framework
 
 * Run npm install to get all dependencies
-* We use jason for running our tests and karma with extensions (istanbul, phantomjs) for coverage and linting
+* We use jasmin for running our tests and karma with extensions (istanbul, phantomjs) for test coverage and ESlint for linting
 
 
 ##### How to run jasmine tests
@@ -15,15 +15,16 @@
 
 ##### How to install and run coverage tools
 
+
+* To run ESlint tests use `npx eslint ./jasmine/src/file_name.js`
 * Type `npm test` in command line (That should start a `http://localhost:9878` server) 
 * The coverage should be displayed in command line
-* To run ESlint tests use `npx eslint ./jasmine/src/file_name.js`
 
 
 
 ## OO design and aproach
 
-  I decided to go with javascript for this project because on of my personal goals is to
+  I decided to go with javascript for this project because one of my personal goals is to
   learn it and understand it well enough to use react framework.
   I believe that 3 classes would be enough for all the specifications for this project,
   but "Today" class is there to make code abit more readable.
