@@ -1,8 +1,9 @@
 describe("Transactions", function() {
 
   beforeEach(function() {
-    
+
     balance = jasmine.createSpyObj('balance', ['show']);
+    // spyOn(transactions, 'saveAddRecord')
 
     transactions = new Transactions(balance)
 
@@ -26,9 +27,13 @@ describe("Transactions", function() {
 
   describe('showTransactions', function() {
     it("Should display the transactions history", function() {
+      spyOn(window.console, 'log')
+      balance.show.and.returnValue(200)
       transactions.add(200)
+      balance.show.and.returnValue(400)
       transactions.add(200)
-      expect(transactions.showTransactions()).toEqual('date || credit || debit || balance\n2020-1-28 || || 200 || undefined\n2020-1-28 || || 200 || undefined');
+      transactions.showTransactions()
+      expect(window.console.log).toHaveBeenCalled();
     });
   });
 });

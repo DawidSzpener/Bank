@@ -3,6 +3,9 @@
 
 ## Testing framework
 
+* Run npm install to get all dependencies
+* We use jason for running our tests and karma with extensions (istanbul, phantomjs) for coverage and linting
+
 
 ##### How to run jasmine tests
 
@@ -12,7 +15,6 @@
 
 ##### How to install and run coverage tools
 
-* Run npm install
 * Type `npm test` in command line (That should start a `http://localhost:9878` server) 
 * The coverage should be displayed in command line
 * To run ESlint tests use `npx eslint ./jasmine/src/file_name.js`
@@ -21,13 +23,13 @@
 
 ## OO design and aproach
 
+  I decided to go with javascript for this project because on of my personal goals is to
+  learn it and understand it well enough to use react framework.
+  I believe that 3 classes would be enough for all the specifications for this project,
+  but "Today" class is there to make code abit more readable.
 
-  I realized that 3 classes would be enough for all the specifications for this project,
-  but the "Validation" class could come useful later on if I want to expand on this project and add
-  backend to it (E.g. database with users) and "Today" class makes code more readable.
 
-
-#### 5 "classes" 
+#### 4 "classes" 
 
 * Account - uses transaction and balance class to manage account operations 
 
@@ -41,4 +43,9 @@
 * Today - gets todays date
 
 
-* Validation - checks if transaction is valid (E.g. if you have enough balance to withdraw)
+
+### APP working in console (screenshot)
+
+
+
+![alt text](https://github.com/DawidSzpener/Bank/sc.png)

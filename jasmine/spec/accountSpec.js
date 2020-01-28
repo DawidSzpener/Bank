@@ -24,14 +24,12 @@ describe("Account", function() {
 
   describe('Display', function() {
     it("Should show previous transactions", function() {
+      spyOn(window.console, 'log')
+      transactions.showTransactions.and.returnValue(console.log("1"))
       account.deposit(200)
       account.deposit(200)
-      transactions.showTransactions.and.returnValue('date || credit || debit || balance\n' +
-      '2020-1-28 || || 200 || 400\n' +
-      '2020-1-28 || || 200 || 200')
-      expect(account.display()).toEqual('date || credit || debit || balance\n' +
-      '2020-1-28 || || 200 || 400\n' +
-      '2020-1-28 || || 200 || 200');
+      transactions.showTransactions()
+      expect(window.console.log).toHaveBeenCalled();
     });
   });
 });
