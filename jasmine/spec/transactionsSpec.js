@@ -2,7 +2,8 @@ describe("Transactions", function() {
 
   beforeEach(function() {
     
-    balance = new Balance
+    balance = jasmine.createSpyObj('balance', ['show']);
+
     transactions = new Transactions(balance)
 
   })
@@ -10,6 +11,7 @@ describe("Transactions", function() {
   describe('Deduct', function() {
     it("Should deduct amount from the account", function() {
       transactions.deduct(200)
+      balance.show.and.returnValue(-200)
       expect(transactions.show()).toEqual(-200);
     });
   });
@@ -17,6 +19,7 @@ describe("Transactions", function() {
   describe('Add', function() {
     it("Should add balance to the account by amount", function() {
       transactions.add(200)
+      balance.show.and.returnValue(200)
       expect(transactions.show()).toEqual(200);
     });
   });

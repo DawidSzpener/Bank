@@ -14,11 +14,11 @@
 
 
   I realized that 3 classes would be enough for all the specifications for this project,
-  but the validation class could come useful later on if I want to expand on this project and add
-  backend to it (E.g. database with users)
+  but the "Validation" class could come useful later on if I want to expand on this project and add
+  backend to it (E.g. database with users) and "Today" class makes code more readable.
 
 
-#### 4 "classes" 
+#### 5 "classes" 
 
 * Account - uses transaction and balance class to manage account operations 
 
@@ -29,5 +29,7 @@
 * Balance - stores the balance
 
 
-* Validation - checks if transaction is valid (E.g. if you have enough balance to withdraw)
+* Today - gets todays date
 
+
+* Validation - checks if transaction is valid (E.g. if you have enough balance to withdraw)
