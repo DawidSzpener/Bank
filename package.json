@@ -1,0 +1,37 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "istanbul": "^0.4.5",
+    "jasmine": "^3.5.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "jasmine-node": "^3.0.0",
+    "jasmine-supertest": "^1.0.0",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coverage": "^2.0.1",
+    "karma-jasmine": "^3.1.0",
+    "karma-jasmine-html-reporter": "^1.5.1",
+    "nyc": "^15.0.0",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "karma-coverage-istanbul-reporter": "^2.1.1",
+    "karma-phantomjs-launcher": "^1.0.4"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DawidSzpener/Bank.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DawidSzpener/Bank/issues"
+  },
+  "homepage": "https://github.com/DawidSzpener/Bank#readme"
+}
