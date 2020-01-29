@@ -2,7 +2,7 @@ describe("Account", function() {
 
   beforeEach(function() {
     transactions = jasmine.createSpyObj('transactions', ['show', 'saveDepositRecord', 'saveWithdrawRecord', 'showTransactions']);
-    balance = jasmine.createSpyObj('balance', ['show']);
+    balance = jasmine.createSpyObj('balance', ['show', 'addToTheBalance', 'deductFromTheBalance']);
 
     account = new Account(transactions, balance);
   })

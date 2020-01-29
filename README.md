@@ -16,7 +16,7 @@
 ##### How to install and run coverage tools / linter
 
 
-* To run ESlint tests use `npx eslint ./jasmine/src/file_name.js`
+* To run ESlint tests use `npx eslint ./src/file_name.js`
 * Type `npm test` in command line (That should start a `http://localhost:9878` server) 
 * The coverage should be displayed in command line
 
@@ -24,9 +24,10 @@
 ##### Feature tests
 
 * Go to root folder `/bank`
+* Type in `node`
 * Load all the js modules 
-`.load ./jasmine/src/balance.js`, `.load ./jasmine/src/today.js`, `.load ./jasmine/src/transactions.js`, `.load ./jasmine/src/account.js`
-* Load the test one by one `.load ./jasmine/spec/feature/displayingTheBalance.js`, `.load ./jasmine/spec/feature/withdrawMoney.js`, `.load ./jasmine/spec/feature/depositMoney.js`
+`.load ./src/balance.js`, `.load ./src/today.js`, `.load ./src/transactions.js`, `.load ./src/account.js`
+* Load the test one by one `.load ./spec/feature/displayingTheBalance.js`, `.load ./spec/feature/withdrawMoney.js`, `.load ./spec/feature/depositMoney.js`
 
 ## OO design and aproach
 
