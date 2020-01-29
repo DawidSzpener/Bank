@@ -13,7 +13,7 @@
 * Open SpecRunner.html file in your browser
 
 
-##### How to install and run coverage tools
+##### How to install and run coverage tools / linter
 
 
 * To run ESlint tests use `npx eslint ./jasmine/src/file_name.js`
@@ -21,14 +21,26 @@
 * The coverage should be displayed in command line
 
 
+##### Feature tests
+
+* Go to root folder `/bank`
+* Load all the js modules 
+`.load ./jasmine/src/balance.js`, `.load ./jasmine/src/today.js`, `.load ./jasmine/src/transactions.js`, `.load ./jasmine/src/account.js`
+* Load the test one by one `.load ./jasmine/spec/feature/displayingTheBalance.js`, `.load ./jasmine/spec/feature/withdrawMoney.js`, `.load ./jasmine/spec/feature/depositMoney.js`
 
 ## OO design and aproach
 
   I decided to go with javascript for this project because one of my personal goals is to
   learn it and understand it well enough to use react framework.
-  I believe that 3 classes would be enough for all the specifications for this project,
-  but "Today" class is there to make code abit more readable.
 
+
+  I believe that 3 classes would be enough for all the specifications for this project,
+  but "Today" class is there to make code abit more readable. I have considered changing transactions class because it takes too much load compared to others but im leaving it like this for now.
+  It could be changed to just save transactions history and move the functionality of changing balance into account class.
+  
+
+  Its my first time trying to mock tests in js seriously and im not sure if my approach is correct.
+  
 
 #### 4 "classes" 
 

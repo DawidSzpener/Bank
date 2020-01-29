@@ -7,12 +7,14 @@
 
   Transactions.prototype.add = function(int) {
     this.balance.ammount += int;
-    this.saveAddRecord(int)
+    this.saveAddRecord(int);
   };
 
   Transactions.prototype.deduct = function(int) {
-    this.balance.ammount -= int;
-    this.saveDeductRecord(int)
+    if (this.balance.show() >= int) {
+      this.balance.ammount -= int;
+      this.saveDeductRecord(int);
+    }
   };
 
   Transactions.prototype.show = function() {
@@ -21,18 +23,19 @@
 
   Transactions.prototype.showTransactions = function() {
     console.log("date || credit || debit || balance");
-    for (index = this.history.length -1; index >= 0; index--) {
+    var index = this.history.length -1;
+    for (index; index >= 0; index--) {
       console.log(this.history[index]);
     }
   };
 
   Transactions.prototype.saveAddRecord = function(int) {
     this.history.push((new Today).date() + " || || " + int + " || " + this.balance.show());
-  }
+  };
 
   Transactions.prototype.saveDeductRecord = function(int) {
     this.history.push((new Today).date() + " || " + int + " || || " + this.balance.show());
-  }
+  };
 
   exports.Transactions = Transactions;
 })(this);
