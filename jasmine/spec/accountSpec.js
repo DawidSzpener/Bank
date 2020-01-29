@@ -1,24 +1,26 @@
 describe("Account", function() {
 
   beforeEach(function() {
-    transactions = jasmine.createSpyObj('transactions', ['show', 'add', 'deduct', 'showTransactions']);
+    transactions = jasmine.createSpyObj('transactions', ['show', 'saveDepositRecord', 'saveWithdrawRecord', 'showTransactions']);
+    balance = jasmine.createSpyObj('balance', ['show']);
 
-    account = new Account(transactions);
+    account = new Account(transactions, balance);
   })
 
   describe('Deposit', function() {
     it("Should add money to accounts balance", function() {
       account.deposit(200)
-      transactions.show.and.returnValue(200)
+      balance.show.and.returnValue(200)
       expect(account.showBalance()).toEqual(200);
     });
   });
 
   describe('Withdraw', function() {
     it("Should deduct money from accounts balance", function() {
+      account.deposit(200)
       account.withdraw(200)
-      transactions.show.and.returnValue(-200)
-      expect(account.showBalance()).toEqual(-200);
+      balance.show.and.returnValue(0)
+      expect(account.showBalance()).toEqual(0);
     });
   });
 

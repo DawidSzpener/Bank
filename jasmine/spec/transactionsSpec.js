@@ -2,45 +2,32 @@ describe("Transactions", function() {
 
   beforeEach(function() {
 
-    balance = jasmine.createSpyObj('balance', ['show']);
     // spyOn(transactions, 'saveAddRecord')
 
-    transactions = new Transactions(balance)
+    transactions = new Transactions()
 
   })
 
-  describe('Deduct', function() {
-    it("Should deduct amount from the account", function() {
-      transactions.add(200)
-      transactions.deduct(200)  
-      balance.show.and.returnValue(0)
-      expect(transactions.show()).toEqual(0);
-    });
-    
-    it("Shouldnt deduct amount from the account if balance is less than ammount required", function() {
-      transactions.deduct(200)  
-      balance.show.and.returnValue(0)
-      expect(transactions.show()).toEqual(0);
-    });
-  });
-
-  describe('Add', function() {
-    it("Should add balance to the account by amount", function() {
-      transactions.add(200)
-      balance.show.and.returnValue(200)
-      expect(transactions.show()).toEqual(200);
-    });
-  });
-
   describe('showTransactions', function() {
-    it("Should display the transactions history", function() {
-      balance.show.and.returnValue(200)
-      transactions.add(200)
-      balance.show.and.returnValue(400)
-      transactions.add(200)
+    it("Should display the history of transactions", function() {
       spyOn(window.console, 'log')
       transactions.showTransactions()
       expect(window.console.log).toHaveBeenCalled();
+    });
+  });
+
+  describe('saveDepositRecord', function() {
+    it("Should save the record of depositing single time", function() {
+      transactions.saveDepositRecord(200, 0, "20-09-2020")
+      expect(transactions.show()).toEqual(['20-09-2020 || || 200 || 0'])
+    });
+  });
+
+  describe('saveWithdrawRecord', function() {
+    it("Should save the record of withdrawing single time", function() {
+      transactions.saveDepositRecord(200, 0, "20-09-2020")
+      transactions.saveWithdrawRecord(200, 0, "20-09-2020")
+      expect(transactions.show()).toEqual(['20-09-2020 || || 200 || 0', '20-09-2020 || 200 || || 0'])
     });
   });
 });

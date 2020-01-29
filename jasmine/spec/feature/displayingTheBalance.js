@@ -1,4 +1,3 @@
 balance = new Balance;
-transactions = new Transactions(balance);
-account = new Account(transactions);
-account.display();
+transactions = new Transactions;
+account = new Account(transactions, balance);account.display();

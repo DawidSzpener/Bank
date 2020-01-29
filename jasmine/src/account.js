@@ -1,8 +1,9 @@
 (function(exports) {
 
 
-  function Account(transaction){
-    this.transactions = transaction;
+  function Account(transactions, balance){
+    this.transactions = transactions;
+    this.balance = balance;
   }
   
   Account.prototype.display = function() {
@@ -10,15 +11,22 @@
   };
 
   Account.prototype.withdraw = function(int) {
-    this.transactions.deduct(int);
+    if (this.balance.show() >= int) {
+      this.balance.ammount -= int;
+      this.transactions.saveWithdrawRecord(int, this.balance.show(), (new Today).date());
+      return "Thanks for withdrawing";
+    }
+    return "Not enough funds";
   };
 
   Account.prototype.deposit = function(int) {
-    this.transactions.add(int);
+    this.balance.ammount += int;
+    this.transactions.saveDepositRecord(int, this.balance.show(), (new Today).date());
+    return "Thanks for depositing";
   };
   
   Account.prototype.showBalance = function() {
-    return this.transactions.show();
+    return this.balance.show();
   };
   
   exports.Account = Account;
