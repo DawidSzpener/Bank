@@ -3,11 +3,11 @@ module.exports = function (config) {
       basePath: '',
       frameworks: ['jasmine'],
       files: [
-          'jasmine/src/**/*.js',
-          'jasmine/spec/**/*.js'
+          'src/**/*.js',
+          'spec/**/*.js'
       ],
       preprocessors: {
-        'jasmine/src/**/*.js' : ['coverage']
+        'src/**/*.js' : ['coverage']
       },
       plugins: [
           'karma-coverage-istanbul-reporter',
