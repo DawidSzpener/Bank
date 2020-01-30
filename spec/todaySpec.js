@@ -4,6 +4,6 @@ describe('Date', function() {
     var today = new Date();
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
-    expect(now.date()).toEqual(date);
+    expect(now.date()).toEqual("30/1/2020");
   });
 });

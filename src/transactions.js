@@ -1,28 +1,27 @@
-(function(exports) {
+var Transactions = (function() {
+
+  var history = []
 
   function Transactions(){
-    this.history = [];
   }
 
-  Transactions.prototype.showTransactions = function() {
+  Transactions.prototype.printTransactions = function() {
     console.log("date || credit || debit || balance");
-    var index = this.history.length -1;
+    var index = history.length -1;
     for (index; index >= 0; index--) {
-      console.log(this.history[index]);
+      console.log(history[index]);
     }
   };
 
   Transactions.prototype.saveDepositRecord = function(int, balance, date) {
-    this.history.push(date + " || || " + int + " || " + balance);
+    history.push(date + " || || " + int + " || " + balance);
+    return history
   };
 
   Transactions.prototype.saveWithdrawRecord = function(int, balance, date) {
-    this.history.push(date + " || " + int + " || || " + balance);
+    history.push(date + " || " + int + " || || " + balance);
+    return history
   };
 
-  Transactions.prototype.show = function() {
-    return this.history;
-  };
-
-  exports.Transactions = Transactions;
-})(this);
+  return Transactions;
+})();

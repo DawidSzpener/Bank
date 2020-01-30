@@ -63,3 +63,20 @@
 
 
 ![alt text](https://github.com/DawidSzpener/Bank/blob/master/sc.png)
+
+
+
+
+MAJOR
+Testing
+- [ ] Unit tests are isolated, including Date
+- Look at using Jasmine to help control Date
+Code
+- [ ] Passing linter
+- Linter is failing - also make sure it’s possible to run linting on all relevant files with a single command.
+- [ ] OOP followed
+- Lots of methods not marked as private
+MINOR
+Code
+- [ ] Short classes and methods
+- Some long methods in Account

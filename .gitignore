@@ -9,4 +9,6 @@ index.html
 today.js.html
 transactions.js.html
 lcov.info
+coverage
+node_modules
 .DS_Store

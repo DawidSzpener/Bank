@@ -1,20 +1,23 @@
-(function(exports) {
+var Balance = function() {
+
+    var balance = 0;
 
   function Balance(){
-    this.ammount = 0;
   }
-  
+
   Balance.prototype.show = function() {
-    return this.ammount;
+    return balance;
   };
 
   Balance.prototype.addToTheBalance = function(int) {
-    this.ammount += int;
+    balance += int;
+    return balance
   };
 
   Balance.prototype.deductFromTheBalance = function(int) {
-    this.ammount -= int;
+    balance -= int;
+    return balance
   };
 
-  exports.Balance = Balance;
-})(this);
+  return Balance;
+}();

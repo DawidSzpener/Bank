@@ -1,31 +1,34 @@
 describe("Balance", function() {
 
-  describe('currentBalance', function() {
+  // beforeEach(function() {
+  //   var time = Date('13/01/2012')
+  //   jasmine.clock().install();
+  // });
 
-    var balance = new Balance
+  // afterEach(function() {
+  //   jasmine.clock().uninstall();
+  // });
+
+  var balance = new Balance
+
+  describe('currentBalance', function() {
 
     it("Should return balance value", function() {
       expect(balance.show()).toEqual(0);
     });
   });
 
-  describe('addToTheBalance', function() {
+  describe('deductFromTheBalance', function() {
 
-    var balance = new Balance
-
-    it("Should add value to the balance", function() {
-      balance.addToTheBalance(200)
-      expect(balance.show()).toEqual(200);
+    it("Should deduct value from the balance", function() {
+      expect(balance.deductFromTheBalance(200)).toEqual(-200);
     });
   });
 
-  describe('deductFromTheBalance', function() {
+  describe('addToTheBalance', function() {
 
-    var balance = new Balance
-
-    it("Should deduct value from the balance", function() {
-      balance.deductFromTheBalance(200)
-      expect(balance.show()).toEqual(-200);
+    it("Should add value to the balance", function() {
+      expect(balance.addToTheBalance(400)).toEqual(200);
     });
   });
 });
