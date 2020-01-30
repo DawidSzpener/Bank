@@ -1,14 +1,5 @@
 describe("Balance", function() {
 
-  // beforeEach(function() {
-  //   var time = Date('13/01/2012')
-  //   jasmine.clock().install();
-  // });
-
-  // afterEach(function() {
-  //   jasmine.clock().uninstall();
-  // });
-
   var balance = new Balance
 
   describe('currentBalance', function() {

@@ -1,28 +1,29 @@
-(function(exports) {
+var Account = function() {
+
+  var transactions = transactions;
+  var balance = balance;
 
   function Account(transactions = new Transactions, balance = new Balance){
-    this.transactions = transactions;
-    this.balance = balance;
+
+    Account.prototype.display = function() {
+      return transactions.printTransactions();
+    };
+
+    Account.prototype.withdraw = function(int) {
+      if (balance.show() >= int) {
+        balance.deductFromTheBalance(int);
+        transactions.saveWithdrawRecord(int, balance.show(), Today());
+        return "Your balance is " + balance.show();
+      }
+      return "Not enough funds, your balance is " + balance.show();
+    };
+
+    Account.prototype.deposit = function(int) {
+      balance.addToTheBalance(int);
+      transactions.saveDepositRecord(int, balance.show(), Today());
+      return "Your balance is " + balance.show();
+    };
   }
 
-  Account.prototype.display = function() {
-    return this.transactions.printTransactions();
-  };
-
-  Account.prototype.withdraw = function(int) {
-    if (this.balance.show() >= int) {
-      this.balance.deductFromTheBalance(int);
-      this.transactions.saveWithdrawRecord(int, this.balance.show(), (new Today).date());
-      return "Your balance is " + this.balance.show();
-    }
-    return "Not enough funds, your balance is " + this.balance.show();
-  };
-
-  Account.prototype.deposit = function(int) {
-    this.balance.addToTheBalance(int);
-    this.transactions.saveDepositRecord(int, this.balance.show(), (new Today).date());
-    return "Your balance is " + this.balance.show();
-  };
-
-  exports.Account = Account;
-})(this);
+  return Account;
+}();

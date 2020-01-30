@@ -1,23 +1,23 @@
 var Balance = function() {
 
-    var balance = 0;
+    var _balance = 0;
 
   function Balance(){
+
+    Balance.prototype.show = function() {
+      return _balance;
+    };
+
+    Balance.prototype.addToTheBalance = function(int) {
+      _balance += int;
+      return _balance;
+    };
+
+    Balance.prototype.deductFromTheBalance = function(int) {
+      _balance -= int;
+      return _balance;
+    };
   }
-
-  Balance.prototype.show = function() {
-    return balance;
-  };
-
-  Balance.prototype.addToTheBalance = function(int) {
-    balance += int;
-    return balance
-  };
-
-  Balance.prototype.deductFromTheBalance = function(int) {
-    balance -= int;
-    return balance
-  };
 
   return Balance;
 }();

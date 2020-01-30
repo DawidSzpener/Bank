@@ -16,18 +16,11 @@
 ##### How to install and run coverage tools / linter
 
 
-* To run ESlint tests use `npx eslint ./src/file_name.js`
+* To run ESlint tests use `npx eslint ./src/**`
 * Type `npm test` in command line (That should start a `http://localhost:9878` server) 
 * The coverage should be displayed in command line
 
 
-##### Feature tests
-
-* Go to root folder `/bank`
-* Type in `node`
-* Load all the js modules 
-`.load ./src/balance.js`, `.load ./src/today.js`, `.load ./src/transactions.js`, `.load ./src/account.js`
-* Load the test one by one `.load ./spec/feature/displayingTheBalance.js`, `.load ./spec/feature/withdrawMoney.js`, `.load ./spec/feature/depositMoney.js`
 
 ## OO design and aproach
 
@@ -71,12 +64,11 @@ MAJOR
 Testing
 - [ ] Unit tests are isolated, including Date
 - Look at using Jasmine to help control Date
-Code
-- [ ] Passing linter
-- Linter is failing - also make sure it’s possible to run linting on all relevant files with a single command.
-- [ ] OOP followed
-- Lots of methods not marked as private
 MINOR
 Code
 - [ ] Short classes and methods
 - Some long methods in Account
+
+
+
+I cant make karma stop the server after showing coverage

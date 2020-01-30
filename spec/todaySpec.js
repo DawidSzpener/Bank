@@ -1,9 +1,19 @@
 describe('Date', function() {
-  it("Should return todays date", function() {
-    var now = new Today();
-    var today = new Date();
-    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  
+  beforeEach(function() {
 
-    expect(now.date()).toEqual("30/1/2020");
+    jasmine.clock().install();
+    var baseTime = new Date(2013, 9, 23);
+    jasmine.clock().mockDate(baseTime);
+    jasmine.clock().tick(50)
+    expect(new Date().getTime()).toEqual(baseTime.getTime() + 50);
+  });
+
+  afterEach(function() {
+    jasmine.clock().uninstall();
+  });
+
+  it("Should return todays date", function() {
+    expect(Today()).toEqual("23/10/2013");
   });
 });

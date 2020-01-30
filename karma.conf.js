@@ -23,6 +23,10 @@ module.exports = function (config) {
       browsers: ['PhantomJS'],
       singleRun: false,
       concurrency: Infinity,
+      captureTimeout: 10000,
+      browserDisconnectTolerance: 3,
+      browserDisconnectTimeout: 10000,
+      browserNoActivityTimeout: 10000,
       coverageReporter: {
           includeAllSources: true,
           dir: 'coverage/',
