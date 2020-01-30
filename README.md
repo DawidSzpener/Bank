@@ -59,12 +59,6 @@
 
 
 
-
-MAJOR
-Testing
-- [ ] Unit tests are isolated, including Date
-- Look at using Jasmine to help control Date
-MINOR
 Code
 - [ ] Short classes and methods
 - Some long methods in Account
