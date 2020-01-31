@@ -31,7 +31,7 @@ describe("Transactions", function() {
 
   describe('saveWithdrawRecord', function() {
     it("Should save the record of withdrawing single time", function() {
-      expect(transactions.saveWithdrawRecord(200, 0, new Date)[0]).toEqual('Wed Oct 23 2013 00:00:00 GMT+0100 (British Summer Time) || || 200 || 0')
+      expect(transactions.saveWithdrawRecord(200, 0, new Date)[0]).toEqual('Wed Oct 23 2013 00:00:00 GMT+0100 (British Summer Time) || 200 || || 0')
     });
   });
 });

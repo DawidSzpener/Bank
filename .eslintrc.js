@@ -15,5 +15,16 @@ module.exports = {
     "rules": {
       "semi": ["error", "always"],
       "quotes": ["error", "double"]
+    },
+    "globals": {
+      "Today": "readonly",
+      "Account": "readonly",
+      "Transactions": "readonly",
+      "Balance": "readonly"
+    },
+    rules: {
+      "no-unused-vars": [
+        "off"
+      ]
     }
 };

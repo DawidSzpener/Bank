@@ -56,13 +56,3 @@
 
 
 ![alt text](https://github.com/DawidSzpener/Bank/blob/master/sc.png)
-
-
-
-Code
-- [ ] Short classes and methods
-- Some long methods in Account
-
-
-
-I cant make karma stop the server after showing coverage
