@@ -9,7 +9,7 @@
     "jasmine-console-reporter": "^3.1.0",
     "jasmine-node": "^3.0.0",
     "jasmine-supertest": "^1.0.0",
-    "karma": "^4.4.1",
+    "karma": "^6.4.1",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage": "^2.0.1",
     "karma-jasmine": "^3.1.0",
